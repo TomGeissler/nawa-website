@@ -1,0 +1,56 @@
+ 
+.navIcon > * {
+  width: 30px;
+}
+
+.navIcon {
+  width: 30px;
+  margin-left: 10px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.5s Ease;
+}
+
+.navIcon span {
+  display: inline;
+  margin-left: 40px;
+  float: left;
+  position: relative;
+
+}
+
+.naviconUpper {
+  border-top: 3px solid rgb(37,27,38);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.innerNavicon {
+  margin-top: 5px;
+  border-top: 3px solid rgb(37,27,38);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.naviconLower {
+  border-bottom: 3px solid rgb(37,27,38);
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 5px;
+}
+
+.naviconUpper.on {
+  transform: rotate(360deg);
+  border-top: 3px solid rgb(37,27,38);
+  opacity: 0;
+}
+
+.innerNavicon.on {
+  transform: rotate(45deg);
+  border-top: 3px solid rgb(37,27,38);
+}
+
+.naviconLower.on {
+  transform: translateY(-8px) rotate(-45deg);
+  border-bottom: 3px solid rgb(37,27,38);
+}
