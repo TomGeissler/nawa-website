@@ -258,7 +258,7 @@ Beim Kauf eines Getr&auml;nkes bekommst Du Deinen ersten Stempel in der Kartenmi
         <div class="col rspan_1_of_11"></div>
     </div>
 
-    <div class="section group offsetMid">
+    <div class="section group offsetMid" id="programmSlider">
         <div class="col rspan_1_of_11"></div>
         <div class="col rspan_1_of_11 sliderArrow">
             <div class="pos down-arrow darkArrow rotateLeft prev offset"></div>

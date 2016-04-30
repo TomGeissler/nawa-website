@@ -57,7 +57,9 @@ $(document).ready(function(){
       $('.slider-wrapper').slick({
         prevArrow : $('.prev'),
         nextArrow : $('.next'),
-        adaptiveHeight: true
+        touchMove: true,
+        adaptiveHeight: true,
+        touchThreshold: 3
     });
 
 
@@ -174,13 +176,13 @@ for (var i = 0; i < dataset.club.length; i++){
     $(".list").append("<div class='row' id='r" + i + "'><div class='sction group'><div class='col span_1_of_11 '></div><div class='col span_8_of_11 '><span class='number'>" + (i+1) + "</span><span class='label'>" + dataset.club[i].name + "</span></div><div class='col span_1_of_11 closeicon'><div class='open-close-button' style='background-color:"+dataset.club[i].color+"'></div></div><div class='col span_1_of_11 '></div></div>");
 	$("#r"+ i).css("background","rgb("+dataset.club[i].color+")");
 
-    $("#r"+ i).append("<div class='section group white offsetLight departurelist'><div class='col span_1_of_11 '></div><div class='col span_2_of_11 lastD'></div><div class='col span_3_of_11 fhour'></div><div class='col span_4_of_11 shour'></div><div class='col span_1_of_11 '></div></div>");
+    $("#r"+ i).append("<div class='section group white offsetLight departurelist'><div class='col span_1_of_11 '></div><div class='col span_2_of_11 lastD'></div><div class='col span_4_of_11 fhour'></div><div class='col span_3_of_11 shour'></div><div class='col span_1_of_11 '></div></div>");
 
     $( "#r"+ i +" .departurelist .lastD").append("<hr class='white thin'><span class='hour'>"+ dataset.club[i].last_bus[0] + ":" + dataset.club[i].last_bus[1] +"</span><p>f&auml;hrt der letzte Bus an dieser Haltestelle!</p>");
 
    for (var j = 0; j < dataset.club[i].bus_time.length; j++){
         var col = "fhour"
-        if(j > 1) col ="shour"
+        if(j%2) col ="shour"
          
             $( "#r"+ i +" .departurelist ."+ col).append("<div class='dRow dR"+j+"'><hr class='white thin'><span class='hour'>"+dataset.club[i].bus_time[j].hour+":</span><span class='minute'></span></div>"); 
              for (var k = 0; k < dataset.club[i].bus_time[j].minute.length; k++){
@@ -256,6 +258,11 @@ if(routeSwitch){
     $(".whiteArrow").click(function(event){     
         event.preventDefault();
         $('html,body').animate({scrollTop:($("#info").offset().top)-70}, 500,'easeInOutCirc');
+    });
+
+    $(".darkArrow").click(function(event){     
+        event.preventDefault();
+        $('html,body').animate({scrollTop:($("#programmSlider").offset().top)-70}, 500,'easeInOutCirc');
     });
 
     $(".clublabel").click(function(){

@@ -267,7 +267,7 @@
 			$image = $imageThumb = 'http://exma.de/uploads/'.substr($event['attach_location'], 0, -4).'.jpg';
 		}
 		return '
-		<div class="slider-elements" id="e'.$event['event_id'].'"><div class="clubName">'.$event['location'].'</div><div class="clubEvent">'.$event['title'].'</div><div class="flex-wrapper">'.(isset($event['attach_location']) ? '<div class="image-wrapper"><img src="'.$image.'" alt="'.$event['title'].'" /></div>':'').'<div class="text-wrapper"><p>'.extractstring($text, '<!--sinfo-->', '<!--einfo-->').'</p></div></div></div>'; // Nur der Ausschnitt mit Text
+		<div class="slider-elements" id="e'.$event['event_id'].'"><div class="clubName">'.$event['location'].'</div><div class="clubEvent">'.$event['title'].'</div><div class="flex-wrapper">'.(isset($event['attach_location']) ? '<div class="flex-item image-wrapper"><img src="'.$image.'" alt="'.$event['title'].'" /></div>':'').'<div class="flex-item text-wrapper"><p>'.extractstring($text, '<!--sinfo-->', '<!--einfo-->').'</p></div></div></div>'; // Nur der Ausschnitt mit Text
 	}
 
 

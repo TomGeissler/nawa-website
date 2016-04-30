@@ -181,6 +181,7 @@ a:link, a:visited, a:hover, a:focus, a:active, a:visited:hover {
 .flex-wrapper {
 	display: inline-flex;
 	flex: 0 0 100%;
+	 justify-content: space-between;
 }
 
 .flex-item {
@@ -202,7 +203,7 @@ a:link, a:visited, a:hover, a:focus, a:active, a:visited:hover {
 }
 
 .table-wrapper {
-	min-width: 100%
+	width: 100%
 }
 
 #info .number {
@@ -445,15 +446,10 @@ flex-flow: column;
 		font-size: 0.9em;
 	}
 
-@media (min-width: 1200px) {
-	.text-wrapper {
-		flex-grow: 1;
-		}
-
-	.image-wrapper {
-		padding: 0 0 0 9.236%;
+	.row.open {
+		height : 560px;
 	}
-}
+
 
 	.shorthr {
 		visibility: visible;
@@ -471,6 +467,16 @@ flex-flow: column;
 	#imgRoute {
 		margin: 0;
 		width: 33%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.text-wrapper {
+		flex-grow: 1;
+		}
+
+	.image-wrapper {
+		padding: 0 0 0 9.236%;
 	}
 }
 
