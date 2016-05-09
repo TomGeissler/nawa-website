@@ -428,10 +428,7 @@ flex-flow: column;
 }
 
 @media (min-width: 768px) {
-	#info h1 {
-		font-size: 7.8em;
-	}
-
+	
 	.hour {
 		font-size: 7em;
 	}
